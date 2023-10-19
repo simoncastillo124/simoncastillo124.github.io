@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="navstyle.css">    
+    <link rel="stylesheet" href="docs.min.js">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+            <ul class="navbar-nav">
+                <li class="active">
+                    <a href="#" class="nav-link">Inicio</a>
+                </li>
+                <li class="dropdown nav-item nav-link">
+                    <div>
+                        <p>Productos</p>
+                        <div class="dropdown-content">
+                          <a class="nav-link" href="#">Todos los Productos</a>
+                          <a class="nav-link" href="#">Equipo de mates</a>
+                          <a class="nav-link" href="#">Mates</a>
+                          <a class="nav-link" href="#">Bombillas</a>
+                          <a class="nav-link" href="#">Bolsos</a>
+                          <a class="nav-link" href="#">Yerberas</a>
+                          <a class="nav-link" href="#">Yerba Mate</a>
+                        </div>
+                      </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Quienes somos?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Venta a empresas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Como comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Preguntas frecuentes</a>
+                </li>
+                <li>
+                    <div class="container-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-cart"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                            />
+                        </svg>
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>    
+                    </div>
+                    <div class="container-cart-products hidden-cart">
+                        <h3>Carrito de Compras</h3>
+                        <ul class="cart-product-list">
+                        </ul>
+                        <p style="display: flex; justify-content: space-between; font-size: 20px; font-weight: 900; border-top: 1px solid #b29f91;">Total: <span class="total-pagar">$0</span></p>
+                    </div>                      
+                </li>
+            </ul>
+    </nav>
+<div class="container-items">
+    <div class="item">
+        <figure>
+            <img
+                src="https://forexport.tradicionesargentinas.com/wp-content/uploads/2021/10/4220-scaled.jpg"
+                alt="producto"
+            />
+        </figure>
+        <div class="info-product">
+            <h2>Mate de madera y alpaca</h2>
+            <p class="price">$40</p>
+            <button class="add-to-cart-btn" data-product="mate_alpaca">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <img
+                src="https://matesibarra.com/wp-content/uploads/2021/06/linea-m.jpg"
+                alt="producto"
+            />
+        </figure>
+        <div class="info-product">
+            <h2>Mate de calabaza</h2>
+            <p class="price">$50</p>
+            <button class="add-to-cart-btn" data-product="mate_calabaza">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <img
+                src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/850/787/products/mmeee1-3da1655ec1e8598ac016321610819567-1024-1024.jpg"
+                alt="producto"
+            />
+        </figure>
+        <div class="info-product">
+            <h2>Mate de Messi</h2>
+            <p class="price">$500</p>
+            <button class="add-to-cart-btn" data-product="mate_messi">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <img
+                src="https://d22fxaf9t8d39k.cloudfront.net/d146c9bcaca9914690a19a9cb4ce06031e31d3839245803b8fd3751d02df11ac16935.jpeg"
+                alt="producto"
+            />
+        </figure>
+        <div class="info-product">
+            <h2>Kit yerbera y azucarera</h2>
+            <p class="price">$30</p>
+            <button class="add-to-cart-btn" data-product="yerbera">Añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <img
+                src="https://www.lumilagro.com.ar/wp-content/uploads/2023/04/Copia-de-termo-central-0.jpg"
+                alt="producto"
+            />
+        </figure>
+        <div class="info-product">
+            <h2>Termo Rosario Central</h2>
+            <p class="price">$60</p>
+            <button class="add-to-cart-btn" data-product="termo">Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-line"></div>
+    <div class="footer-wrapper">
+        <section class="footer-top">
+            <div class="footer-headline">
+                <h2>Unite a matoros</h2>
+                <p>
+                    Suscribite para ver nuevos ingresos
+                </p>
+            </div>
+            <div class="footer-subscribe">
+                <input type="email" spellcheck="false" placeholder="Email">
+                <button>
+                    Registrarse
+                </button>
+            </div>
+        </section>
+        <div class="footer-columns">
+            <section class="footer-logo">
+                <h2>
+                    <iconify-icon icon="fluent-emoji-flat:mate" width="100px"></iconify-icon>
+                </h2>
+            </section>
+            <section>
+                <h3>Productos</h3>
+                <ul>
+                    <li>
+                        <a href="#" title="">Mates</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Combos</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Bombillas</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Yerba mate</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Termos</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Recursos</h3>
+                <ul>
+                    <li>
+                        <a href="#" title="Support">Soporte</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Help Centre">Centro de ayuda</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Compania</h3>
+                <ul>
+                    <li>
+                        <a href="#" title="About Us">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Contact">Contacto</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Legal</h3>
+                <ul>
+                    <li>
+                        <a href="#" title="Terms and services">
+                            Terminos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Privacy Policy">
+                            Privacidad
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Cookies">
+                            Cookies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Licenses">
+                            Licencias
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <div class='social-links'>
+                <ul>
+                    <li>
+                        <a href="#" title="Instagram">
+                            <iconify-icon icon="mdi:instagram" width="30px"  style="color: white;"></iconify-icon>                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Twitter">
+                            <iconify-icon icon="bi:twitter" width="30px"  style="color: white;"></iconify-icon>                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Youtube">
+                            <iconify-icon icon="mdi:youtube" width="30px"  style="color: white;"></iconify-icon>                                
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <small>© Matoros <span id="year"></span>, All rights reserved</small>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="script.js"></script>
+</html>
+    
