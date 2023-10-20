@@ -195,6 +195,6 @@
     </div>
 </footer>
 </body>
-<script src="script.js"></script>
+<script src="src/script.js"></script>
 </html>
     
