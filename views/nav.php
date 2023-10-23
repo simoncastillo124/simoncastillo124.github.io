@@ -10,6 +10,7 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
+    <?php $conx=mysqli_connect("localhost","root","","matoros")or die("pasaron cositas en la conexion"); ?>
 <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
                 <li class="active">
@@ -19,7 +20,7 @@
                     <div>
                         <p>Productos</p>
                         <div class="dropdown-content">
-                          <a class="nav-link" href="#">Todos los Productos</a>
+                          <a class="nav-link" href="index.php">Todos los Productos</a>
                           <a class="nav-link" href="#">Equipo de mates</a>
                           <a class="nav-link" href="#">Mates</a>
                           <a class="nav-link" href="#">Bombillas</a>

@@ -7,9 +7,32 @@
 
 </head>
 <body>
-<?php include("nav.php") ?>
+<?php include("nav.php");
+$sql="SELECT * FROM producto";
+if(!$result= mysqli_query($conx,$sql)) die("consulta fallida");
+?>
+
 <div class="container-items">
-    <div class="item">
+<?php
+    while ($fila= mysqli_fetch_assoc($result)) {
+?>   
+<div class="item">
+    
+    <figure>
+        <img
+            src="content-type:video/mp4,<?php echo $fila["imagen"] ?>"
+            alt="producto"
+        />
+    </figure>
+    <div class="info-product">
+        <h2>Mate de madera y alpaca</h2>
+        <p class="price">$40</p>
+        <button class="add-to-cart-btn" data-product="mate_alpaca">Añadir al carrito</button>
+    </div>
+</div> 
+<?php }?>
+<div class="item">
+    
         <figure>
             <img
                 src="https://forexport.tradicionesargentinas.com/wp-content/uploads/2021/10/4220-scaled.jpg"
