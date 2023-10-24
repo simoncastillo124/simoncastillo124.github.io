@@ -18,11 +18,11 @@
 - [About the Project](#star2-about-the-project)
 
 ## :star2: About the Project
-# Equipo🧔:
-  # Back-End
+### Equipo🧔:
+  ##### Back-End
    -Patricio Lorenze(patogihub)<br>
    -Mateo Morales()
-  # Front-End:
+  ##### Front-End:
   -Simon Castillo(simoncastillo124) <br>
   -Rafael Pelatti()
 ## Tech 🔧:
