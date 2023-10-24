@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-10-2023 a las 00:28:45
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.0.25
+-- Tiempo de generación: 24-10-2023 a las 16:33:39
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `matoros`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `impuestos`
+--
+
+CREATE TABLE `impuestos` (
+  `id_impuesto` int(11) NOT NULL,
+  `impuesto` varchar(12) NOT NULL,
+  `valor` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `impuestos`
+--
+
+INSERT INTO `impuestos` (`id_impuesto`, `impuesto`, `valor`) VALUES
+(1, 'IVA', 21);
 
 -- --------------------------------------------------------
 
@@ -86,7 +105,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`ID`, `username`, `password`, `email`, `telefono`, `domicilio`, `numero_domicilio`, `codigo_postal`, `usertype`) VALUES
-(1, 'pato', 'pato123', 'pato@pato.com', 123456789, 'porahi', 123, '6740', 1);
+(1, 'patoooon', 'pato', 'pato@pato.com', 123456789, 'porahi', 123, '6740', 1),
+(3, 'patin', 'patonto', '1@1.com', 4512, 'bb', 5123, '6142', 2);
 
 -- --------------------------------------------------------
 
@@ -104,6 +124,12 @@ CREATE TABLE `ventas` (
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `impuestos`
+--
+ALTER TABLE `impuestos`
+  ADD PRIMARY KEY (`id_impuesto`);
 
 --
 -- Indices de la tabla `producto`
@@ -138,6 +164,12 @@ ALTER TABLE `ventas`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `impuestos`
+--
+ALTER TABLE `impuestos`
+  MODIFY `id_impuesto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -147,7 +179,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`

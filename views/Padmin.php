@@ -12,10 +12,8 @@ $sl="SELECT usertype from usuario where ID=$id";
 if(!$resul= mysqli_query($conx,$sl)) die("consulta fallida");
 while ($row= mysqli_fetch_assoc($resul)){
     if($row["usertype"]!=1){
-
         header("location: index.php ");
     }
-
  }
 
 
@@ -47,7 +45,10 @@ if(!$result= mysqli_query($conx,$sql)) die("consulta fallida");
 <td><?php echo $fila["numero_domicilio"] ?></td>
 <td><?php echo $fila["codigo_postal"] ?></td>
 <td><?php echo $fila["usertype"] ?></td>
-<td>&nbsp;</td>
+<td>
+<a href="../logica/Cusuarios.php?id=<?php echo $fila["ID"] ?>& delete=1 "><iconify-icon icon="carbon:delete"></iconify-icon></a>
+<a href="forms/Ueditar.php?id=<?php echo $fila["ID"] ?>"><iconify-icon icon="tabler:edit"></iconify-icon></a>
+</td>
 </tr>
 </tbody>
 <?php }?>

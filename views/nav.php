@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>nav</title>
     <link href="../src/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../src/navstyle.css">    
     <link rel="stylesheet" href="../src/docs.min.js">
@@ -13,7 +13,7 @@
     <?php $conx=mysqli_connect("localhost","root","","matoros")or die("pasaron cositas en la conexion"); 
         session_start();
     if (!isset($_SESSION['loggedin'])) {
-        header('Location: aaa.html');
+        header('Location: forms/login.php');
         exit;}
         $id=$_SESSION["id"];
         $sql="SELECT usertype from usuario where ID=$id";

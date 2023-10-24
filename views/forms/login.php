@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../../src/style.css">
 </head>
 <body>
     
@@ -12,7 +12,7 @@
 	<div class="screen">
 		<div class="screen__content">
 			<iconify-icon icon="openmoji:mate" width="100px" height="100px"></iconify-icon>		            
-			<form class="login" action="../logica/auth.php" method="post">
+			<form class="login" action="../../logica/auth.php" method="post">
 				<h1>Matoros</h1>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
