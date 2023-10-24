@@ -45,6 +45,7 @@ $stmt->close();
                 <tr>
                     <td>Email:</td>
                     <td><?= $email ?></td>
+                    <a href="forms/Ueditar.php?id=<?php echo $_SESSION["id"] ?>">editar perfil</a>
                 </tr>
             </table>
 
