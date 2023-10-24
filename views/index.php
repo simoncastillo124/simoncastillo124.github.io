@@ -14,19 +14,20 @@ if(!$result= mysqli_query($conx,$sql)) die("consulta fallida");
 
 <div class="container-items">
 <?php
+
     while ($fila= mysqli_fetch_assoc($result)) {
 ?>   
 <div class="item">
     
     <figure>
-        <img
-            src="content-type:video/mp4,<?php echo $fila["imagen"] ?>"
-            alt="producto"
-        />
+       <?php
+        echo '<img src="data:image/png;base64,' . base64_encode($fila["imagen"]) . 
+            'alt="producto"'. '"/>';  
+       ?>
     </figure>
     <div class="info-product">
-        <h2>Mate de madera y alpaca</h2>
-        <p class="price">$40</p>
+        <h2><?php echo $fila["nombre"] ?></h2>
+        <p class="price">$<?php echo $fila["precio"] ?></p>
         <button class="add-to-cart-btn" data-product="mate_alpaca">Añadir al carrito</button>
     </div>
 </div> 

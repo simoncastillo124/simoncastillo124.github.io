@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
@@ -12,16 +12,17 @@
 	<div class="screen">
 		<div class="screen__content">
 			<iconify-icon icon="openmoji:mate" width="100px" height="100px"></iconify-icon>		            
-			<form class="login" action="index.html" method="post">
-				<h1>Matoros.</h1>
+			<form class="login" action="../logica/auth.php" method="post">
+				<h1>Matoros</h1>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Gmail">
+					<input type="text" class="login__input" name="email" placeholder="Gmail">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Contraseña">
+					<input type="password" class="login__input" name="password" placeholder="Contraseña">
 				</div>
+				<a href="register.php">¿no tienes cuenta?</a>
 				<button class="button login__submit">
 					<span class="button__text">A matear!</span>
 					<i class="button__icon fas fa-chevron-right"></i>
