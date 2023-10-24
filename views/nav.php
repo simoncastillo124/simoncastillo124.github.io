@@ -10,7 +10,19 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
-    <?php $conx=mysqli_connect("localhost","root","","matoros")or die("pasaron cositas en la conexion"); ?>
+    <?php $conx=mysqli_connect("localhost","root","","matoros")or die("pasaron cositas en la conexion"); 
+        session_start();
+    if (!isset($_SESSION['loggedin'])) {
+        header('Location: aaa.html');
+        exit;}
+        $id=$_SESSION["id"];
+        $sql="SELECT usertype from usuario where ID=$id";
+        if(!$result= mysqli_query($conx,$sql)) die("consulta fallida");
+        while ($fila= mysqli_fetch_assoc($result)){
+        ?>
+
+
+
 <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
                 <li class="active">
@@ -29,6 +41,11 @@
                           <a class="nav-link" href="#">Yerba Mate</a>
                         </div>
                       </div>
+                      <?php if($fila["usertype"]==1){ ?>
+                            <li class="nav-item">
+                                <a href="Padmin.php" class="nav-link">panel de admin</a>
+                            </li>
+                        <?php }?>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Quienes somos?</a>
@@ -42,6 +59,8 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">Preguntas frecuentes</a>
                 </li>
+                <?php }?>
+
                 <li>
                     <div class="container-icon">
                         <svg
@@ -68,6 +87,12 @@
                         </ul>
                         <p style="display: flex; justify-content: space-between; font-size: 20px; font-weight: 900; border-top: 1px solid #b29f91;">Total: <span class="total-pagar">$0</span></p>
                     </div>                      
+                </li>
+                <li class="nav-item">
+                    <a href="perfil.php" class="nav-link"><?php echo $_SESSION["name"] ?></a>
+                </li>
+                <li class="nav-item">
+                    <a href="../logica/logout.php" class="nav-link">logout</a>
                 </li>
             </ul>
     </nav>
