@@ -24,7 +24,7 @@
    -Mateo Morales()
   ##### Front-End:
   -Simon Castillo(simoncastillo124) <br>
-  -Rafael Pelatti()
+  -Rafael Pelatti(rfp7)
 ## Tech 🔧:
   -Bootstrap 🎨<br>
   -PHP PLANO 🔙
