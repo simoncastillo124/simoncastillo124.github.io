@@ -1,4 +1,4 @@
-<?php include("nav.php");  ?>
+<?php include("nav.php"); session_start();  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,7 @@
     <title>panel</title>
 </head>
 <?php 
+
 $sl="SELECT usertype from usuario where ID=$id";
 if(!$resul= mysqli_query($conx,$sl)) die("consulta fallida");
 while ($row= mysqli_fetch_assoc($resul)){
@@ -22,7 +23,7 @@ if(!$result= mysqli_query($conx,$sql)) die("consulta fallida");
 ?>
 <body>
 <button id="toggleButton">Mostrar/Esconder usuarios</button>
-    <table class="table table-dark" id="usuarios" style="display: none;" >
+<table class="table table-dark" id="usuarios" style="display: none;" >
 <thead>
 <tr>
 <td>nombre</td>

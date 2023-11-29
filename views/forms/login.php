@@ -23,6 +23,9 @@
 					<input type="password" class="login__input" name="password" placeholder="Contraseña">
 				</div>
 				<a href="register.php">¿no tienes cuenta?</a>
+				<?php if (isset($_GET['WTF'])){?>
+				<h2 class="danger"> USUARIO O CONTRASEÑA INCORRECTA </h2>	
+				<?php } ?>
 				<button class="button login__submit">
 					<span class="button__text">A matear!</span>
 					<i class="button__icon fas fa-chevron-right"></i>

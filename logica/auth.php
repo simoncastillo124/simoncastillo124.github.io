@@ -55,7 +55,7 @@ if ($stmt->num_rows > 0) {
 } else {
 
     // usuario incorrecto
-    header('Location: ../views/login.php');
+    header('Location: ../views/login.php?WTF=1');
 }
 
 $stmt->close();

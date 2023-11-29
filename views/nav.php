@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../src/navstyle.css">    
     <link rel="stylesheet" href="../src/docs.min.js">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
 </head>
 <body>
     <?php $conx=mysqli_connect("localhost","root","","matoros")or die("pasaron cositas en la conexion"); 
-        session_start();
     if (!isset($_SESSION['loggedin'])) {
         header('Location: forms/login.php');
         exit;}
@@ -96,5 +96,6 @@
                 </li>
             </ul>
     </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

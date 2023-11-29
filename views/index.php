@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<?php include("nav.php");
+<?php include("nav.php"); session_start();
 $sql="SELECT * FROM producto";
 if(!$result= mysqli_query($conx,$sql)) die("consulta fallida");
 ?>
